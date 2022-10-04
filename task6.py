@@ -1,11 +1,11 @@
 # task №6
 user_string = input('Enter your string: ')
+user_string = "".join(j for j in user_string if j.isalpha())
 
 
 def is_palindrome(text: str) -> bool:
-    text = "".join(j for j in text if j.isalpha())
-    text1 = text[::-1]
-    return text1.lower()
+    text = text[::-1]
+    return text.lower()
 
 
 if user_string.lower() == is_palindrome(user_string):
