@@ -18,6 +18,5 @@ while running:
     elif int(user_number) == num:
         print('You guessed right!')
         count += 1
-        
+
 print(f'You guessed {count} times.')
-    

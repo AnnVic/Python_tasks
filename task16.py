@@ -10,25 +10,19 @@ upper_letter = string.ascii_uppercase
 strong_pas = num + symbols + lower_letter + upper_letter
 weak_pas = num + lower_letter
 
-def generate_password(length):
+
+def generate_password(length: int) -> tuple:
     start_time = datetime.now()
     user_answer = input('Choose strong or weak ').lower()
     password = ''
     if user_answer == 'strong':
         for _ in range(length):
             password += random.choice(strong_pas)
-        print(password)
+        return password, f'Run time is {datetime.now() - start_time}'
     elif user_answer == 'weak':
         for _ in range(length):
             password += random.choice(weak_pas)
-        print(password)
-    print(f'Run time is {datetime.now() - start_time}')
-    
-generate_password(10)
+        return password, f'Run time is {datetime.now() - start_time}'
 
 
-
-
-
-
-    
+print(generate_password(10))

@@ -1,14 +1,16 @@
 # task №8
 print("Let's start the game")
 running = True
-answers = { 'rock' : 'scissors',
-            'scissors' : 'paper',
-            'paper' : 'rock'
-          }
+answers = {'rock': 'scissors',
+           'scissors': 'paper',
+           'paper': 'rock'
+           }
 
 while running:
-    player1 = input('Player №1 enter your move: rock, scissors or paper ').lower()
-    player2 = input('Player №2 enter your move: rock, scissors or paper ').lower()
+    player1 = input(
+        'Player №1 enter your move: rock, scissors or paper ').lower()
+    player2 = input(
+        'Player №2 enter your move: rock, scissors or paper ').lower()
 
     for key, value in answers.items():
         if player1 == key and player2 == value:
@@ -25,4 +27,3 @@ while running:
 
     if new_game == 'no':
         running = False
-

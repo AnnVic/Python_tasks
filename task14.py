@@ -1,5 +1,5 @@
 # task №14
-def get_unique_elem(lst):
+def get_unique_elem(lst: list) -> list:
     new_list = []
     for i in lst:
         if i not in new_list:
@@ -7,8 +7,9 @@ def get_unique_elem(lst):
     return new_list
 
 
-def get_unique_elem2(lst):
+def get_unique_elem2(lst: list) -> list:
     return list(set(lst))
+
 
 print(get_unique_elem([1, 2, 5, 2, 8, 9, 5, 9]))
 print(get_unique_elem2([1, 2, 5, 2, 8, 9, 5, 9]))
