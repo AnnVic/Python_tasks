@@ -1,14 +1,14 @@
 # task №14
-def get_unique_elem(lst: list) -> list:
+def get_unique_elem(array: list) -> list:
     new_list = []
-    for i in lst:
-        if i not in new_list:
-            new_list.append(i)
+    for element in array:
+        if element not in new_list:
+            new_list.append(element)
     return new_list
 
 
-def get_unique_elem2(lst: list) -> list:
-    return list(set(lst))
+def get_unique_elem2(array: list) -> list:
+    return list(set(array))
 
 
 print(get_unique_elem([1, 2, 5, 2, 8, 9, 5, 9]))
