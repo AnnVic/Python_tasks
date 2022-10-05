@@ -9,7 +9,7 @@ def get_word(lst: list) -> str:
     return word
 
 
-def start_game():
+def start_game() -> None:
     print('Welcome to Hangman!')
     word = list(get_word(words).upper())
     word_guess = list('_' * len(word))
