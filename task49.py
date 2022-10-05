@@ -1,12 +1,18 @@
-class Animal:
+from abc import ABC, abstractmethod
+
+
+class Animal(ABC):
+    @abstractmethod
     def say(self):
-        raise NotImplementedError
+        pass
 
+    @abstractmethod
     def info(self):
-        raise NotImplementedError
+        pass
 
+    @abstractmethod
     def attak(self):
-        raise NotImplementedError
+        pass
 
 
 class Cat(Animal):
