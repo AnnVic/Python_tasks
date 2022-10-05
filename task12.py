@@ -2,10 +2,10 @@
 a = [5, 10, 15, 20, 25]
 
 
-def get_list(lst: list) -> list:
+def get_list(array: list) -> list:
     new_list = []
-    new_list.append(lst[0])
-    new_list.append(lst[-1])
+    new_list.append(array[0])
+    new_list.append(array[-1])
     return new_list
 
 
@@ -14,8 +14,8 @@ print(get_list(a))
 # solution 2
 
 
-def get_new_list(lst: list) -> list:
-    b, *_, c = lst
+def get_new_list(array: list) -> list:
+    b, *_, c = array
     return [b, c]
 
 
