@@ -4,8 +4,8 @@ with open('sowpods.txt', 'r') as f:
     words = f.readlines()
 
 
-def get_word(lst: list) -> str:
-    word = random.choice(lst).strip()
+def get_word(array: list) -> str:
+    word = random.choice(array).strip()
     return word
 
 
