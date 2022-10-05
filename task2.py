@@ -1,7 +1,7 @@
 # task №2
 user_number = int(input('Enter your number '))
 
-if user_number % 2 == 0:
+if not (user_number % 2):
     print(f'{user_number} is even')
 elif user_number % 4 == 0:
     print(f'{user_number} is a multiple of 4')
