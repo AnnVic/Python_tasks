@@ -8,6 +8,6 @@ soup = BeautifulSoup(res.text, 'html.parser')
 title = soup.findAll('h3')
 articles = []
 for txt in title:
-    articles += [txt.contents[0]]
+    articles.append(txt.contents[0])
 
 print(articles)
