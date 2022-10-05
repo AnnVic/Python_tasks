@@ -1,5 +1,5 @@
-def is_inside(lst: list, number: int) -> bool:
-    return number in lst
+def is_inside(array: list, number: int) -> bool:
+    return number in array
 
 
 print(is_inside([1, 2, 7, 9, 4], 1))
@@ -7,20 +7,20 @@ print(is_inside([1, 2, 7, 9, 4], 1))
 # solution binary search
 
 
-def is_inside_binary(lst: list, number: int) -> bool:
+def is_inside_binary(array: list, number: int) -> bool:
     first = 0
-    last = len(lst) - 1
-    mid = len(lst) // 2
-    while lst[mid] != number and first <= last:
-        if number > lst[mid]:
+    last = len(array) - 1
+    mid = len(array) // 2
+    while array[mid] != number and first <= last:
+        if number > array[mid]:
             first = mid + 1
         else:
             last = mid - 1
         mid = (first + last) // 2
-        if lst[mid] == number:
+        if array[mid] == number:
             return True
         else:
             return False
 
 
-print(is_inside_binary([1, 2, 7, 9, 4], 1))
+print(is_inside_binary([1, 2, 7, 9, 4], 3))
