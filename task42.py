@@ -5,10 +5,16 @@ class Country:
         self.population = population
 
     def __add__(self, other):
-        return self.population + other.population
+        if isinstance(other, self.__class__):
+            return self.population + other.population
+        else:
+            raise TypeError
 
     def __gt__(self, other):
-        return self.population > other.population
+        if isinstance(other, self.__class__):
+            return self.population > other.population
+        else:
+            raise TypeError
 
 
 usa = Country('USA', 'english', 8500000)
