@@ -20,13 +20,13 @@ class Cat(Animal):
         self.name = name
         self.age = age
 
-    def say(self):
+    def say(self) -> None:
         print('Meow')
 
-    def info(self):
+    def info(self) -> None:
         print(f'Hi! I am {self.name}')
 
-    def attak(self):
+    def attak(self) -> None:
         print(f'{self.name} will release its claws.')
 
 
@@ -35,13 +35,13 @@ class Dog(Animal):
         self.name = name
         self.age = age
 
-    def say(self):
+    def say(self) -> None:
         print('Rrrr')
 
-    def info(self):
+    def info(self) -> None:
         print(f'Hi! I am {self.name}')
 
-    def attak(self):
+    def attak(self) -> None:
         print(f'{self.name} will bite.')
 
 

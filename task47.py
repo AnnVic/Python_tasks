@@ -2,10 +2,10 @@ class Square:
     def __init__(self, lenght: int):
         self.lenght = lenght
 
-    def get_perimetr(self):
+    def get_perimetr(self) -> int:
         return self.lenght ** 2
 
-    def get_square(self):
+    def get_square(self) -> int:
         return self.lenght * 4
 
 

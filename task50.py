@@ -5,15 +5,15 @@ class Apartment:
         self.__area = area
 
     @property
-    def area(self):
+    def area(self) -> int:
         return self.__area
 
     @area.setter
-    def area(self, area):
+    def area(self, area) -> None:
         self.__area = area
 
     @area.deleter
-    def area(self):
+    def area(self) -> None:
         del self.__area
 
 
