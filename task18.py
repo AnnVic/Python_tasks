@@ -1,10 +1,8 @@
 import random
-number = str(random.randint(1000, 9999))
+number = random.sample(range(9), 4)
 count = 0
 running = True
-lst = []
-for i in number:
-    lst.append(i)
+print(number)
 
 while running:
     print('If you want to leave the game, press n')
@@ -15,13 +13,13 @@ while running:
     cow = 0
     bull = 0
 
-    user_lst = []
+    user_list = []
     for i in user_answer:
-        user_lst.append(i)
-    for i in lst:
-        if i in user_lst and user_lst.index(i) == lst.index(i):
+        user_list.append(int(i))
+    for i in number:
+        if i in user_list and user_list.index(i) == number.index(i):
             cow += 1
-        elif i in user_lst and user_lst.index(i) != lst.index(i):
+        elif i in user_list:
             bull += 1
 
     count += 1
