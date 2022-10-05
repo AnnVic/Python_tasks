@@ -2,7 +2,7 @@
 num = int(input('Enter how many Fibonnaci numbers to generate '))
 
 
-def generate_fibonnaci(num: int) -> int:
+def generate_fibonnaci(num: int) -> None:
     a, b = 1, 1
     for _ in range(num):
         print(a, end=', ')
