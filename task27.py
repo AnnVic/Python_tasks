@@ -3,22 +3,17 @@ game = [[0, 0, 0],
         [0, 0, 0]]
 
 
-def player1_move(table: list, x: int, y: int):
-    if table[x][y] == 0:
+def player_move(table: list, x: int, y: int, person: int) -> None:
+    if table[x][y] == 0 and person == 1:
         table[x][y] = 'X'
-    for i in table:
-        print(i)
-
-
-def player2_move(table: list, x: int, y: int):
-    if table[x][y] == 0:
+    else:
         table[x][y] = 'O'
     for i in table:
         print(i)
 
 
-def check_winner(table: list):
-    for i in range(0, 3):
+def check_winner(table: list) -> str:
+    for i in range(3):
         if table[i][0] == table[i][1] == table[i][2] != 0:
             if table[i][0] == 'X':
                 return ('Player 1 won')
@@ -48,8 +43,8 @@ def check_winner(table: list):
 
 
 player = 1
-count = 9
-while count > 0:
+print(*game, sep='\n')
+while True:
     move = input(f'Player {player} move: ').split(',')
     row = int(move[0].strip()) - 1
     col = int(move[1].strip()) - 1
@@ -57,14 +52,13 @@ while count > 0:
         print('Incorrect move')
     else:
         if player == 1:
-            player1_move(game, row, col)
-            if check_winner(game) == 'Player 1 won' or check_winner(game) == 'Player 2 won':
+            player_move(game, row, col, player)
+            if check_winner(game) == 'Player 1 won':
                 print(check_winner(game))
                 break
         else:
-            player2_move(game, row, col)
-            if check_winner(game) == 'Player 1 won' or check_winner(game) == 'Player 2 won':
+            player_move(game, row, col, player)
+            if check_winner(game) == 'Player 2 won':
                 print(check_winner(game))
                 break
     player = 3 - player
-    count -= 1
