@@ -5,6 +5,7 @@ game = [[1, 2, 0],
 winner_is_2 = [[2, 2, 0],
                [2, 1, 0],
                [2, 1, 1]]
+
 winner_is_1 = [[1, 2, 0],
                [2, 1, 0],
                [2, 1, 1]]
@@ -22,8 +23,8 @@ also_no_winner = [[1, 2, 0],
                   [2, 1, 0]]
 
 
-def main(table: list):
-    for i in range(0, 3):
+def main(table: list) -> None:
+    for i in range(3):
         if table[i][0] == table[i][1] == table[i][2] != 0:
             print(f'Player {table[i][0]} won')
             break
